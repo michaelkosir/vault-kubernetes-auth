@@ -12,9 +12,7 @@ resource "vault_kubernetes_auth_backend_config" "k8s" {
 }
 
 resource "vault_kubernetes_auth_backend_role" "this" {
-  depends_on = [kubernetes_service.vault]
-
-  backend                          = vault_auth_backend.k8s.path
+  backend                          = vault_kubernetes_auth_backend_config.k8s.backend
   role_name                        = "workload-role"
   audience                         = "vault"
   bound_service_account_names      = [kubernetes_service_account.app.metadata[0].name]
