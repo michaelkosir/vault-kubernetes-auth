@@ -7,7 +7,8 @@ This means Vault does not store any JWTs and allows you to use short-lived token
 > **Note:**  
 > When using the Client JWT option, the token's audience must include the Kubernetes Issuer URL.  
 > If you are using service account token volume projection, the audience must only be the Kubernetes Issuer URL.  
-> You can use obtain the Issuer URL with the following command: `kubectl get --raw /.well-known/openid-configuration | jq -r .issuer`
+> You can use obtain the Issuer URL with the following command:  
+> `kubectl get --raw /.well-known/openid-configuration | jq -r .issuer`
 
 ## Diagram
 <img src="../.images/client-token.jpg">
