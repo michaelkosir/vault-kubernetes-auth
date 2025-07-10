@@ -1,6 +1,6 @@
 # Vault + Kubernetes - Authentication Strategies
 
-## K8s Auth Method
+## Kubernetes Auth Method
 The Kubernetes auth method can be used to authenticate with Vault using a Kubernetes Service Account Token. This method of authentication makes it easy to introduce a Vault token into a Kubernetes Pod. The Kubernetes auth method is specialized to use Kubernetes' TokenReview API.
 
 - [Use local service account token as the reviewer JWT](./local-token/)
