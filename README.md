@@ -1,5 +1,13 @@
 # Vault + Kubernetes - Authentication Strategies
 
+## Demo
+Everything in these demos are done locally, so there are a few requirements you need to have installed on your machine:
+- [Terraform](https://www.terraform.io/downloads.html)
+- [Docker](https://www.docker.com/get-started)
+- [Kind](https://kind.sigs.k8s.io/docs/user/quick-start#installation)
+- [Kubectl](https://kubernetes.io/docs/tasks/tools/)
+- [JQ](https://jqlang.org/download/)
+
 ## Kubernetes Auth Method
 The Kubernetes auth method can be used to authenticate with Vault using a Kubernetes Service Account Token. This method of authentication makes it easy to introduce a Vault token into a Kubernetes Pod. The Kubernetes auth method is specialized to use Kubernetes' TokenReview API.
 
