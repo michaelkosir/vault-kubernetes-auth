@@ -5,9 +5,9 @@ When configuring Kubernetes auth, you can omit the `token_reviewer_jwt`, and Vau
 This means Vault does not store any JWTs and allows you to use short-lived tokens everywhere but adds some operational overhead to maintain the cluster role bindings on the set of service accounts you want to be able to authenticate with Vault. Each client of Vault would need the `system:auth-delegator` ClusterRole.
 
 > **Note:**  
-> When using the Client JWT option, the token audience MUST be the Kubernetes Issuer URL.  
-> You can use obtain the Issuer URL with the following command:  
-> `kubectl get --raw /.well-known/openid-configuration | jq -r .issuer`
+> When using the Client JWT option, the token's audience must include the Kubernetes Issuer URL.  
+> If you are using service account token volume projection, the audience must only be the Kubernetes Issuer URL.  
+> You can use obtain the Issuer URL with the following command: `kubectl get --raw /.well-known/openid-configuration | jq -r .issuer`
 
 ## Diagram
 <img src="../.images/client-token.jpg">
