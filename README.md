@@ -1,7 +1,7 @@
 # Vault + Kubernetes - Authentication Strategies
 
 ## Demo
-Everything in these demos are done locally, so there are a few requirements you need to have installed on your machine:
+These demos are done locally. There are a few requirements you need to have installed on your machine:
 - [Terraform](https://www.terraform.io/downloads.html)
 - [Docker](https://www.docker.com/get-started)
 - [Kind](https://kind.sigs.k8s.io/docs/user/quick-start#installation)
